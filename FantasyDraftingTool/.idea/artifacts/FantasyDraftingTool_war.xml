@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="FantasyDraftingTool:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="fantasydratingtool.war">
+      <element id="artifact" artifact-name="FantasyDraftingTool:war exploded" />
+    </root>
+  </artifact>
+</component>

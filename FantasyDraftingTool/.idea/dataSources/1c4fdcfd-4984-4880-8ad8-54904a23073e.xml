@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - @localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="draftingtool">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="information_schema"/>
+    <schema id="3" name="mysql"/>
+    <schema id="4" name="performance_schema"/>
+    <schema id="5" name="sample"/>
+    <schema id="6" name="sys"/>
+    <schema id="7" name="ToDo"/>
+    <schema id="8" name="week5security"/>
+    <table id="9" parent="1" name="nflTeam"/>
+    <table id="10" parent="1" name="player"/>
+    <table id="11" parent="1" name="teamPlayer"/>
+    <table id="12" parent="1" name="team"/>
+    <table id="13" parent="1" name="league"/>
+    <table id="14" parent="1" name="leagueUser"/>
+    <table id="15" parent="1" name="user"/>
+    <column id="16" parent="9" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="17" parent="9" name="nflTeamCity">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="18" parent="9" name="nflTeamName">
+      <data-type>varchar(70)|0</data-type>
+    </column>
+    <column id="19" parent="9" name="teamAbbreviation">
+      <data-type>varchar(3)|0</data-type>
+    </column>
+    <column id="20" parent="9" name="teamDivision">
+      <data-type>varchar(10)|0</data-type>
+    </column>
+    <key id="21" parent="9" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="22" parent="10" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="23" parent="10" name="firstName">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="24" parent="10" name="lastName">
+      <data-type>varchar(70)|0</data-type>
+    </column>
+    <column id="25" parent="10" name="nflTeamId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="26" parent="10" name="position">
+      <data-type>varchar(2)|0</data-type>
+    </column>
+    <column id="27" parent="10" name="playingNumber">
+      <data-type>int(2)|0</data-type>
+    </column>
+    <key id="28" parent="10" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="29" parent="11" name="playerId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="30" parent="11" name="leagueId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="31" parent="11" name="teamId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="32" parent="11" name="firstName">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="33" parent="11" name="lastName">
+      <data-type>varchar(70)|0</data-type>
+    </column>
+    <column id="34" parent="11" name="position">
+      <data-type>varchar(2)|0</data-type>
+    </column>
+    <column id="35" parent="12" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="36" parent="12" name="leagueId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="37" parent="12" name="teamName">
+      <data-type>varchar(70)|0</data-type>
+    </column>
+    <column id="38" parent="12" name="ownerFirstName">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="39" parent="12" name="ownerLastName">
+      <data-type>varchar(70)|0</data-type>
+    </column>
+    <column id="40" parent="12" name="userId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="41" parent="12" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="42" parent="13" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="43" parent="13" name="leagueName">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="44" parent="13" name="numberOfTeams">
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="45" parent="13" name="sizeOfRoster">
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="46" parent="13" name="userId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="47" parent="13" name="dateCreated">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="48" parent="13" name="draftDate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="49" parent="13" name="draftTime">
+      <data-type>time|0</data-type>
+    </column>
+    <key id="50" parent="13" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="51" parent="14" name="userId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="52" parent="14" name="leagueId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="53" parent="14" name="leagueName">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="54" parent="15" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="55" parent="15" name="userPassword">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="56" parent="15" name="firstName">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="57" parent="15" name="lastName">
+      <data-type>varchar(70)|0</data-type>
+    </column>
+    <column id="58" parent="15" name="email">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <key id="59" parent="15" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

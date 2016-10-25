@@ -1,0 +1,18 @@
+body {
+    background-color: palegreen;
+}
+
+.navbar {
+    background-color: lightgrey;
+}
+
+.container#createLeagueForm {
+    width: 50%;
+}
+
+.form-control {
+    size: 40px;
+}
+
+form#createUserAccountForm {
+}
