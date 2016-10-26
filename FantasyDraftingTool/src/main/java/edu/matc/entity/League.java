@@ -36,12 +36,6 @@ public class League {
     @Column(name = "dateCreated")
     private Date dateCreated;
 
-    @Column(name = "draftDate")
-    private Date draftDate;
-
-    @Column(name = "draftTime")
-    private Date draftTime;
-
     public int getLeagueId() {
         return leagueId;
     }
@@ -80,22 +74,6 @@ public class League {
 
     public void setUserId(int userId) {
         this.userId = userId;
-    }
-
-    public Date getDateCreated() {
-        return dateCreated;
-    }
-
-    public void setDateCreated(Date dateCreated) {
-        this.dateCreated = dateCreated;
-    }
-
-    public Date getDraftDate() {
-        return draftDate;
-    }
-
-    public void setDraftDate(Date draftDate) {
-        this.draftDate = draftDate;
     }
 
 

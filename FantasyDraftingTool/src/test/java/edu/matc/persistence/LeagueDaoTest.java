@@ -35,7 +35,7 @@ public class LeagueDaoTest {
         leagues = dao.getAllLeagues();
         assertEquals(1, leagues.size());
     }
-    /**
+
     @Test
     public void getLeague() {
         League league = dao.getLeague(1);
@@ -78,5 +78,5 @@ public class LeagueDaoTest {
         assertNotEquals("This is a test", leagueToUpdate.getLeagueName());
 
     }
-    */
+
 }

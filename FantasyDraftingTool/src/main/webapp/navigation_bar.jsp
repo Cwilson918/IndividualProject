@@ -12,7 +12,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/index.jsp">HOME</a></li>
                 <li><a href="/createLeague.jsp">CREATE LEAGUE</a></li>
-                <li><a href="/signIn.jsp">SIGN IN</a></li>
+                <li><a href="/login.jsp">SIGN IN</a></li>
                 <li><a href="/signUp.jsp">CREATE ACCOUNT</a></li>
             </ul>
         </div>

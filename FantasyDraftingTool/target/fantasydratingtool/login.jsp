@@ -13,7 +13,7 @@
 <div class="container">
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
-    <form>
+    <form action="j_security_check" method="post">
     <fieldset>
 
         <legend>Sign In</legend>
@@ -22,7 +22,7 @@
         <div class="row form-group">
             <label class="col-md-3 control-label" for="signInUsername">Username:</label>
             <div class="col-md-9">
-                <input id="signInUsername" name="signInUsername" type="text"
+                <input id="signInUsername" name="j_username" type="text"
                        placeholder="Username" class="form-control input-md">
             </div>
         </div>
@@ -31,7 +31,7 @@
         <div class="row form-group">
             <label class="col-md-3 control-label" for="signInPassword">Password:</label>
             <div class="col-md-9">
-                <input id="signInPassword" name="signInPassword" type="password"
+                <input id="signInPassword" name="j_password" type="password"
                        placeholder="Password" class="form-control input-md">
             </div>
         </div>
