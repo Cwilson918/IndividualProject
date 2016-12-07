@@ -24,6 +24,7 @@
         <mapping class="edu.matc.entity.User"/>
         <mapping class="edu.matc.entity.League" />
         <mapping class="edu.matc.entity.Player" />
+        <mapping class="edu.matc.entity.Team" />
 
     </session-factory>
 

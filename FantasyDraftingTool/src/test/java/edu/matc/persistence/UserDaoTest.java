@@ -24,54 +24,28 @@ import static org.junit.Assert.assertNotEquals;
  */
 public class UserDaoTest {
 
-    UserDao dao;
+    private Logger log = Logger.getLogger(this.getClass());
+    UserDao userDao;
 
     @Before
     public void setup() {
-        dao = new UserDao();
+        userDao = new UserDao();
     }
 
     @Test
-    public void getUser() throws Exception {
-        User user = dao.getUser(10);
-        assertEquals("Test First Name", user.getFirstName());
-        assertEquals("Test Last Name", user.getLastName());
-    }
+    public void createUserTest() {
+        User testUser = new User();
 
-    @Test
-    public void addUser() throws Exception {
-        User user = new User();
-        user.setFirstName("TestFirstName");
-        user.setLastName("TestLastName");
-        user.setEmail("TestEmail");
-        user.setPassword("TestPassword");
+        testUser.setUsername("testUser");
+        testUser.setPassword("testPw");
+        testUser.setFirstName("Test");
+        testUser.setLastName("Testing");
+        testUser.setEmail("test@testing.com");
 
-        int id = dao.addUser(user);
-
-        dao.deleteUser(id);
-
-    }
-
-    @Test
-    public void updateUser() throws Exception {
-
-        User userToUpdate = dao.getUser(10);
-
-        String startingLastName = userToUpdate.getLastName();
-
-        userToUpdate.setLastName("Test");
-        dao.updateUser(userToUpdate);
-
-        assertEquals("Test", userToUpdate.getLastName());
-        assertEquals("Test First Name", userToUpdate.getFirstName());
-
-        userToUpdate.setLastName(startingLastName);
-        dao.updateUser(userToUpdate);
-
-        assertNotEquals("Test", userToUpdate.getLastName());
-
-
+        userDao.create(testUser);
 
 
     }
+
+
 }

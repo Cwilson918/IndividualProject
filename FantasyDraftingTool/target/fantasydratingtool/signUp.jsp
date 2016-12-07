@@ -21,7 +21,7 @@
                 <label class="col-md-3 control-label" for="createUserAccountFirstName">First Name:</label>
                 <div class="col-md-9">
                     <input id="createUserAccountFirstName" name="createUserAccountFirstName" type="text"
-                           placeholder="First Name" class="form-control input-md">
+                           placeholder="First Name" class="form-control input-md" required />
                 </div>
             </div>
 
@@ -30,7 +30,7 @@
                 <label class="col-md-3 control-label" for="createUserAccountLastName">Last Name:</label>
                 <div class="col-md-9">
                     <input id="createUserAccountLastName" name="createUserAccountLastName" type="text"
-                           placeholder="Last Name" class="form-control input-md">
+                           placeholder="Last Name" class="form-control input-md" required />
                 </div>
             </div>
 
@@ -39,7 +39,16 @@
                 <label class="col-md-3 control-label" for="createUserAccountEmail">Email:</label>
                 <div class="col-md-9">
                     <input id="createUserAccountEmail" name="createUserAccountEmail" type="text"
-                           placeholder="Email" class="form-control input-md">
+                           placeholder="Email" class="form-control input-md" required />
+                </div>
+            </div>
+
+            <!-- Username -->
+            <div class="row form-group">
+                <label class="col-md-3 control-label" for="createUserUsername">Username:</label>
+                <div class="col-md-9">
+                    <input id="createUserUsername" name="createUserUsername" type="text"
+                           placeholder="Username" class="form-control input-md" required />
                 </div>
             </div>
 
@@ -48,7 +57,7 @@
                 <label class="col-md-3 control-label" for="createUserAccountFirstPassword">Password:</label>
                 <div class="col-md-9">
                     <input id="createUserAccountFirstPassword" name="createUserAccountFirstPassword" type="password"
-                           placeholder="Password" class="form-control input-md">
+                           placeholder="Password" class="form-control input-md" required />
                 </div>
             </div>
 
@@ -57,7 +66,7 @@
                 <label class="col-md-3 control-label" for="createUserAccountSecondPassword">Repeat Password:</label>
                 <div class="col-md-9">
                     <input id="createUserAccountSecondPassword" name="createUserAccountSecondPassword" type="password"
-                           placeholder="Repeat Password" class="form-control input-md">
+                           placeholder="Repeat Password" class="form-control input-md" required />
                 </div>
             </div>
 

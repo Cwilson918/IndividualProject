@@ -2,8 +2,6 @@ package edu.matc.entity;
 
 import javax.persistence.Entity;
 
-import com.sun.javafx.beans.IDProperty;
-import org.hibernate.annotations.CollectionId;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -19,8 +17,11 @@ public class User {
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")
-    @Column(name = "id")
+    @Column(name = "userId")
     private int userId;
+
+    @Column(name = "username")
+    private String username;
 
     @Column(name = "userPassword")
     private String password;
@@ -46,6 +47,10 @@ public class User {
     public void setUserId(int userId) {
         this.userId = userId;
     }
+
+    public String getUsername() { return username; }
+
+    public void setUsername(String username) { this.username = username;}
 
     public String getPassword() {return password;}
 
