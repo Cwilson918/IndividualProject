@@ -15,14 +15,14 @@
     <h2>List of Available Players</h2>
 
     <!-- Search Form -->
-    <form method="get" action="/playerSearch">
+    <form>
         <fieldset>
             <legend>Search Players</legend>
 
             <!-- Search Input -->
             <div class="row form-group">
                 <div class="col-md-9">
-                    <input id="playerSearch" name="playerSearch" type="text"
+                    <input id="inputPlayerSearch" name="inputPlayerSearch" type="text"
                            placeholder="" class="form-control input-md">
                 </div>
             </div>
@@ -31,16 +31,21 @@
             <div class="row form-group">
                 <div class="col-md-9"></div>
                 <div class="col-md-3">
-                    <button id="searchPlayersBtn" name="searchPlayersBtn" class="btn">Search</button>
+                    <button type="button" id="searchPlayersBtn" class="btn">Search</button>
                 </div>
             </div>
         </fieldset>
     </form>
     <div class="col-md-9" id="foundPlayersContainer">
         <h2>Found Players</h2>
-    <c:forEach var="foundPlayer" items="${foundPlayers}">
-        <li>${foundPlayer.fullName} - ${foundPlayer.team}</li>
-    </c:forEach>
+        <table id="foundPlayersTable" class="table table-striped">
+            <thead>
+                <tr><th>Full Name</th><th>Team</th><th>Position</th><th>Add?</th></tr>
+            </thead>
+            <tbody id="foundPlayersTableBody">
+
+            </tbody>
+        </table>
     </div>
     <div class="col-md-9">
     <c:forEach var="individualPlayer" items="${allPlayers}">

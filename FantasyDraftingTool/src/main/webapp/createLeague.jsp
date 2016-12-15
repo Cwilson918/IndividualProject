@@ -7,6 +7,14 @@
 <c:import url="head-tag.jsp" />
 <body>
 
+<div class="container">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <h1 class="topOfPageTitle">Fantasy Draft Tool</h1>
+    </div>
+    <div class="col-lg-4"></div>
+</div>
+
 <c:import url="navigation_bar.jsp" />
 <div class="container" id="createLeagueForm">
     <h2>Create a League</h2>

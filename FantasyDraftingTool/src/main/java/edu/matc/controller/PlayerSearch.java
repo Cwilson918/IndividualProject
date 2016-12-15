@@ -5,7 +5,8 @@ import java.util.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
-import com.google.gson.*;
+
+import org.json.*;
 
 import org.apache.log4j.*;
 import edu.matc.entity.Player;
@@ -28,24 +29,36 @@ public class PlayerSearch extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String searchedPlayer = request.getParameter("playerSearch");
+        String searchedPlayer = request.getParameter("inputPlayerSearch");
 
+        logger.info(searchedPlayer);
+        logger.info("INSIDE PLAYER SEARCH SERVLET");
         List<Player> foundPlayers = playerDao.searchPlayers(searchedPlayer);
 
-        String json = new Gson().toJson(foundPlayers);
+        JSONObject foundPlayersJson = new JSONObject();
+        JSONArray foundPlayersArray = new JSONArray();
+        JSONObject foundPlayerObject;
 
-        logger.warn(json);
+        for (Player foundPlayer : foundPlayers) {
+            foundPlayerObject = new JSONObject();
+            foundPlayerObject.put("fullName", foundPlayer.getFullName());
+            foundPlayerObject.put("position", foundPlayer.getPosition());
+            foundPlayerObject.put("team", foundPlayer.getTeam());
+            foundPlayersArray.put(foundPlayerObject);
+        }
 
+        foundPlayersJson.put("foundPlayers", foundPlayersArray);
+
+
+
+        /**
         request.setAttribute("foundPlayers", foundPlayers);
 
         request.getRequestDispatcher("/listPlayers.jsp").forward(request, response);
-    /**
-
-
+        */
 
         response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(json);
-     */
+        response.getWriter().write(foundPlayersArray.toString());
+
     }
 }

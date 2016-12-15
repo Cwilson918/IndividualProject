@@ -23,6 +23,8 @@ public class PlayerDao extends GenericDao {
     public ArrayList<Player> searchPlayers(String playerName) {
 
         Session session = getSession();
+
+
         session.beginTransaction();
 
         Query query = session.createQuery("from Player as p where p.fullName like :playerName");
@@ -32,6 +34,8 @@ public class PlayerDao extends GenericDao {
         session.getTransaction().commit();
 
         log.debug("Number of players found: " + foundPlayers.size());
+
+        session.close();
 
         return (ArrayList<Player>) foundPlayers;
 

@@ -8,7 +8,18 @@
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>draftboard</web-resource-name>
-      <url-pattern>/draftBoard.jsp</url-pattern>
+      <url-pattern>/draftBoard</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+      <role-name>registered-user</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>login</web-resource-name>
+      <url-pattern>/userLogIn</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>admin</role-name>

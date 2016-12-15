@@ -26,15 +26,9 @@ public class GetPlayersServlet extends HttpServlet{
 
         playerDao = new PlayerDao();
 
-        Player player = (Player) playerDao.get(1);
-
         List<Player> playerList = playerDao.getAll();
 
-        logger.warn(player.getFullName());
 
-
-        request.setAttribute("onePlayer", player);
-        request.setAttribute("allPlayers", playerList);
         logger.info("inside the players servlet.");
 
 

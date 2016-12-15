@@ -7,12 +7,21 @@
 
 <c:import url="head-tag.jsp" />
 <body>
+
+<div class="container">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <h1 class="topOfPageTitle">Fantasy Draft Tool</h1>
+    </div>
+    <div class="col-lg-4"></div>
+</div>
+
 <c:import url="navigation_bar.jsp" />
 
 <div class="container">
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
-    <form id="createUserAccountForm" action="/userRegisterAction" method="POST">
+    <form id="createUserAccountForm" action="${pageContext.request.contextPath}/userRegisterAction" method="POST">
         <fieldset>
             <legend>Create An Account</legend>
 

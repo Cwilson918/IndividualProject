@@ -1,4 +1,5 @@
 <head>
+
     <meta name="generator"
           content="HTML Tidy for Java (vers. 2009-12-01), see jtidy.sourceforge.net" />
 
@@ -8,13 +9,9 @@
     <title>${pageTitle}</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="custom.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/searchPlayersAjax.js"></script>
-
-
-
+    <script src="js/fantasydrafttool.js"></script>
 
 </head>

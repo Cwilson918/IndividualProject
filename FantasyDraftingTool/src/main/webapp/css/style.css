@@ -1,3 +1,38 @@
 body {
-    background-color: lawngreen;
+    background-color: palegreen;
+}
+
+.draftboxCell {
+    width: 8%;
+    height: 70px;
+    text-align: center;
+    font-size: large;
+}
+
+#draftboxTable {
+    background-color: whitesmoke;
+}
+
+#playerScrollingTable {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.topOfPageTitle {
+    text-align: center;
+    height: 75px;
+}
+
+.navbar {
+    background-color: lightgrey;
+    height: 50px;
+    font-size: large;
+}
+
+.container#createLeagueForm {
+    width: 50%;
+}
+
+.form-control {
+    size: 40px;
 }

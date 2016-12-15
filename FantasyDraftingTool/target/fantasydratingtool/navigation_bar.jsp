@@ -10,12 +10,11 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/index.jsp">HOME</a></li>
-                <li><a href="/listOfPlayers">LIST OF PLAYERS</a></li>
-                <li><a href="/draftBoard.jsp">DRAFT NOW</a></li>
-                <li><a href="/createLeague.jsp">CREATE LEAGUE</a></li>
-                <li><a href="/login.jsp">SIGN IN</a></li>
-                <li><a href="/signUp.jsp">CREATE ACCOUNT</a></li>
+                <li><a href="${pageContext.request.contextPath}/home">HOME</a></li>
+                <li><a href="${pageContext.request.contextPath}/nflNews">NFL NEWS</a></li>
+                <li><a href="${pageContext.request.contextPath}/draftBoard">DRAFT NOW</a></li>
+                <li><a href="${pageContext.request.contextPath}/signUp">CREATE ACCOUNT</a></li>
+                <li><a href="${pageContext.request.contextPath}/userLogOut">LOG OUT</a></li>
             </ul>
         </div>
     </div>
